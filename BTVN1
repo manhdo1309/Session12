@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int sub(int a, int b)
+{
+	if(a > b)
+	{
+		int result = a - b;
+		printf("%d - %d = %d\n", a, b, result);
+	}
+	if(b > a)
+	{
+		int result = b - a;
+		printf("%d - %d = %d\n", b, a, result);
+	}
+	return 0;
+}
+
+int main()
+{
+	int a, b, c;
+	printf("Nhap vao 3 so a b c: ");
+	scanf("%d %d %d", &a, &b, &c);
+	int sum1 = a + b;
+	int sum2 = a + c;
+	int sum3 = b + c;
+	printf("Cap so thu nhat: \n");
+	printf("%d + %d = %d\n", a, b, sum1);
+	sub(a, b);
+	printf("Cap so thu hai: \n");
+	printf("%d + %d = %d\n", a, c, sum2);
+	sub(a, c);
+	printf("Cap so thu ba: \n");
+	printf("%d + %d = %d\n", b, c, sum3);
+	sub(b, c);
+	return 0;
+}
+
