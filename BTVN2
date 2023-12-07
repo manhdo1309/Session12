@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int div(int a, int b)
+{
+	if(a > b)
+	{
+		int result = a / b;
+		if(a % b == 0)
+		{
+			printf("%d / %d = %d\n", a, b, result);
+		}
+		else if(a % b != 0)
+		{
+			printf("%d khong chia het cho %d\n", a, b);
+		}
+	}
+	if(b > a)
+	{
+		int result = b / a;
+		if(b % a == 0)
+		{
+			printf("%d / %d = %d\n", b, a, result);
+		}
+		else if(b % a != 0)
+		{
+			printf("%d khong chia het cho %d\n", b, a);
+		}
+	}
+	return 0;
+}
+
+int main()
+{
+	int a, b, c;
+	printf("Nhap vao 3 so a b c: ");
+	scanf("%d %d %d", &a, &b, &c);
+	int mul1 = a * b;
+	int mul2 = a * c;
+	int mul3 = b * c;
+	printf("Cap so thu nhat: \n");
+	printf("%d * %d = %d\n", a, b, mul1);
+	div(a, b);
+	printf("Cap so thu hai: \n");
+	printf("%d * %d = %d\n", a, c, mul2);
+	div(a, c);
+	printf("Cap so thu ba: \n");
+	printf("%d * %d = %d\n", b, c, mul3);
+	div(b, c);
+	return 0;
+}
+
